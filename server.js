@@ -6,8 +6,8 @@ const app = express();
 // Allow requests from your site (update after deployment)
 app.use(cors({ origin: '*' })); // Temporary wildcard
 
-// Bearer token from environment variable
-const BEARER_TOKEN = process.env.BEARER_TOKEN;
+// Hardcoded Bearer token
+const BEARER_TOKEN = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImZiM3ZhMmJhMDkwOGQwOTlkOGY5ZGNhYzQ0ODYifQ.eyJzdWIiOiI1N2Y3MjFjMi1iYjY4LTQxNDMtODgxZS1lYjE5MjM1Mjg0ZjMiLCJhdWQiOlsiaHR0cHM6Ly9iYWdzLmZtIl0sImlzcyI6Imh0dHBzOi8vYXBpLmJhZ3MuZm0vYXBpL3YxL2F1dGgiLCJpYXQiOjE3NDc2OTAxMjgsInNpZCI6ImMtM2NwbWJfcWFwdEotTVItVWVIUE5GRlVsWU9CTkNSIiwiZXhwIjoxNzUwMTA5MzI4LCJzY29wZSI6InVzZXIifQ.iITWhljCdXqmyMIjkNQgKzvhPL3DLNjTmS6bgt7JpVUPiU1brr7UJlPVXuFcug4ALO8f2x8MKCZvcp61dXIwB9U98ye8LDOS4zM8NtCNlCXbXfqCRZbYLZkOXlxZvRHIVNCi2E9HF_469WNPeh8LUaLhW5Dj9GmVbRXSLtjVqQitIgz0KcOsevFFmnQUaSVN1w56VR3GXyJqbrqaTqMlg1v0YNsrlAMOD8vfNN-hzI2gRFx8RE2aUdK_ADiRYJr7h8OMkOu7NQV52jHiAKJblVQB9ahOzbMs7dsfZ8_JP3VmhLziAsnujqiD1uEnj4SaIlDRc33NChmC4tg7l646_g';
 
 // Token Search (dynamic tokenAddress)
 app.get('/proxy/token/find', async (req, res) => {
